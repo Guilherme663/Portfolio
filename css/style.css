@@ -1,0 +1,584 @@
+/* Variáveis de Cores e Fontes */
+:root {
+    --bg-color: #0b0f19;
+    --card-bg: #151b2b;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --accent-color: #6366f1; /* Roxo/Azul do botão */
+    --accent-hover: #4f46e5;
+    --success-color: #10b981; /* Verde do terminal */
+    --border-color: #1e293b;
+    
+    --font-main: 'Inter', sans-serif;
+    --font-code: 'Fira Code', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+.fira-code {
+    font-family: var(--font-code);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(11, 15, 25, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-family: var(--font-code);
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+/* Títulos de Seção */
+.section-title {
+    font-family: var(--font-code);
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: var(--accent-color);
+}
+
+.center-title {
+    display: inline-block;
+    padding-left: 0;
+}
+.center-title::before {
+    left: -15px;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.cursor { animation: blink 1s step-end infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+}
+.btn-primary:hover { background-color: var(--accent-hover); }
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    margin-left: 10px;
+}
+.btn-outline:hover { background-color: var(--card-bg); }
+
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.stat-item h3 { font-size: 1.5rem; font-family: var(--font-code); }
+.stat-item p { color: var(--text-secondary); font-size: 0.8rem; }
+
+/* Terminal Window */
+.terminal-window {
+    background-color: #0d1117;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.terminal-header {
+    background-color: #161b22;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dot {
+    width: 12px; height: 12px; border-radius: 50%; margin-right: 6px;
+}
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+.terminal-header .title {
+    margin-left: auto; margin-right: auto;
+    color: var(--text-secondary); font-size: 0.8rem;
+}
+
+.terminal-body {
+    padding: 20px;
+    color: #a5d6ff;
+    font-size: 0.9rem;
+}
+.terminal-body .success { color: var(--success-color); }
+.cursor-block { background-color: #fff; width: 8px; display: inline-block; animation: blink 1s infinite; }
+
+/* Sobre Mim */
+.sobre-grid {
+    display: flex; gap: 40px; align-items: stretch;
+}
+
+.foto-placeholder {
+    width: 500px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; color: var(--text-secondary); font-size: 0.8rem; padding: 20px;
+}
+
+.foto-placeholder img {
+    /* Define um tamanho fixo e menor (ajuste conforme seu gosto) */
+    width: 500px;
+    height: 300px; /* Igual à largura para manter um quadrado perfeito */
+
+    
+    /* IMPORTANTE: Garante que a foto não fique esticada/deformada */
+    object-fit: cover; 
+    /* Garante que a imagem não vaze para fora se a div for menor */
+    max-width: 100%; 
+}
+
+.foto-legend { margin-top: auto; color: var(--accent-color); font-family: var(--font-code); }
+
+.sobre-texto h3 { font-size: 1.8rem; margin-bottom: 10px; }
+.sobre-texto .highlight { color: var(--text-secondary); margin-bottom: 20px; font-size: 0.9rem;}
+.sobre-texto p { margin-bottom: 15px; color: var(--text-secondary); }
+
+.badges { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+.badge {
+    background-color: var(--card-bg); border: 1px solid var(--border-color);
+    padding: 6px 12px; border-radius: 4px; font-size: 0.8rem; color: var(--text-secondary);
+}
+
+/* Trajetória (Timeline) */
+.timeline {
+    border-left: 2px solid var(--border-color);
+    padding-left: 30px; margin-left: 10px;
+}
+
+.timeline-item { position: relative; margin-bottom: 40px; }
+.timeline-dot {
+    position: absolute; left: -37px; top: 0;
+    width: 12px; height: 12px; border-radius: 50%;
+    background-color: var(--accent-color); border: 4px solid var(--bg-color);
+}
+.timeline-dot.active { background-color: var(--success-color); box-shadow: 0 0 10px var(--success-color); }
+
+.timeline-content .date { font-family: var(--font-code); color: var(--accent-color); font-size: 0.9rem; display: block; margin-bottom: 5px;}
+.timeline-content h3 { margin-bottom: 10px; }
+.timeline-content p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 10px; }
+.status-active { background-color: rgba(16, 185, 129, 0.1); color: var(--success-color); padding: 2px 8px; border-radius: 12px; font-size: 0.7rem; margin-left: 10px;}
+
+.tags { display: flex; gap: 8px; }
+.tag {
+    background-color: rgba(255,255,255,0.05); color: var(--text-secondary);
+    padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-family: var(--font-code);
+}
+
+/* Skills */
+.skill-category { color: var(--text-secondary); margin-bottom: 20px; font-weight: normal;}
+.mt-4 { margin-top: 40px; }
+.skills-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.skill-card {
+    background-color: var(--card-bg); border: 1px solid var(--border-color);
+    border-radius: 12px; padding: 20px; width: 120px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: transform 0.3s;
+}
+.skill-card:hover { transform: translateY(-5px); }
+.skill-icon { font-size: 2.5rem; margin-bottom: 10px; }
+.add-card { border: 1px dashed var(--text-secondary); background: transparent; cursor: pointer; }
+
+/* Projetos */
+.projetos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.projeto-card {
+    background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden;
+}
+.projeto-img {
+    height: 180px; background-color: #1e2536; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.9rem;
+}
+.projeto-img i { font-size: 2rem; margin-bottom: 10px; }
+.projeto-info { padding: 20px; }
+.projeto-info h3 { margin-bottom: 10px; }
+.projeto-info p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 15px; }
+.projeto-link { color: var(--accent-color); font-size: 0.9rem; display: inline-flex; align-items: center; gap: 5px; margin-top: 15px;}
+.projeto-link:hover { text-decoration: underline; }
+
+/* Formação */
+.certificados-list { display: flex; flex-direction: column; gap: 15px; }
+.certificado-item {
+    background-color: var(--card-bg); border: 1px solid var(--border-color);
+    padding: 20px; border-radius: 8px; display: flex; align-items: center; gap: 15px;
+}
+.cert-tag { font-size: 0.8rem; padding: 4px 8px; border-radius: 4px; background-color: #2d3748; }
+.cert-tag.dio { background-color: #4f46e5; color: white; }
+.cert-ano { color: var(--text-secondary); font-size: 0.9rem; margin-left: auto; }
+
+/* Contato */
+#contato { padding-bottom: 60px; }
+.contato-links { display: flex; justify-content: center; gap: 30px; margin-top: 30px; flex-wrap: wrap; }
+.contato-links a {
+    color: var(--accent-color); font-family: var(--font-code); display: flex; align-items: center; gap: 8px; transition: 0.3s;
+}
+.contato-links a:hover { color: var(--text-primary); }
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    #hero, .sobre-grid, .projetos-grid { flex-direction: column; align-items: center; }
+    .terminal-window { width: 100%; }
+    .nav-links { display: none; /* Em um projeto real, adicionar menu hambúrguer */ }
+    .stats { justify-content: center; }
+}
+
+
+/* =========================================
+   Animação de Inicialização (Boot Screen) 
+   ========================================= */
+#boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-code);
+    transition: opacity 0.8s ease-in-out, visibility 0.8s;
+}
+
+.boot-text {
+    /* clamp() faz o texto ficar gigante no PC, mas se adapta no celular */
+    font-size: clamp(1.5rem, 4vw, 3.5rem); 
+    font-weight: 600;
+    color: var(--accent-color); /* Deixa as letras na cor roxa do seu tema */
+    text-align: left;
+    width: 90%;
+    max-width: 1200px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   Fundo de Rede de Partículas (Canvas)
+   ========================================= */
+#particle-network {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Garante que fique atrás de todos os elementos do site */
+    pointer-events: none; /* O mouse passa direto por ele, sem bloquear cliques nos botões */
+    background-color: var(--bg-color); /* Usa a cor de fundo do seu tema */
+}
+
+/* =========================================
+   Efeito Sonar/Submarino (Em andamento)
+   ========================================= */
+
+/* Estilo da bolinha verde */
+.sonar-dot {
+    display: inline-block;
+    width: 10px; /* Tamanho da bolinha */
+    height: 10px;
+    background-color: #10b981; /* Cor verde escuro/esmeralda (ajuste para a sua cor exata) */
+    border-radius: 50%;
+    margin-right: 8px; /* Dá um espacinho entre a bolinha e o texto */
+    
+    /* Aplica a animação chamada 'ping' */
+    animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* A mágica da animação (ondas de radar) */
+@keyframes ping {
+    0% {
+        /* Começa sem sombra (onda encostada na bolinha) */
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.8); 
+    }
+    75% {
+        /* A sombra expande 12px para fora e fica transparente */
+        box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+    }
+    100% {
+        /* Mantém transparente até reiniciar o ciclo */
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+/* =========================================
+   Carrossel de Frameworks
+   ========================================= */
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px; /* Largura máxima do carrossel */
+    margin: 0 auto;
+}
+
+.carousel-container {
+    overflow: hidden; /* Esconde o 4º card em diante */
+    width: 100%;
+    padding: 10px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 15px; /* Espaço entre os cards */
+    transition: transform 0.4s ease-in-out; /* Animação suave ao deslizar */
+}
+
+.carousel-track .skill-card {
+    /* A matemática mágica: 3 cards visíveis considerando o gap de 15px */
+    flex: 0 0 calc(33.333% - 10px); 
+    box-sizing: border-box;
+}
+
+/* Estilo dos botões do carrossel */
+.carousel-btn {
+    background-color: transparent;
+    color: var(--accent-color); /* Usa a cor roxa do seu tema */
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Opcional: responsividade para celular (mostrar 2 ou 1 por vez) */
+@media (max-width: 768px) {
+    .carousel-track .skill-card {
+        flex: 0 0 calc(50% - 7.5px); /* Mostra 2 no tablet/celular deitado */
+    }
+}
+@media (max-width: 480px) {
+    .carousel-track .skill-card {
+        flex: 0 0 100%; /* Mostra 1 no celular em pé */
+    }
+}
+
+/* =========================================
+   Carrossel de Imagens dos Projetos
+   ========================================= */
+.projeto-carousel {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Altura da área da imagem. Pode ajustar se quiser maior */
+    overflow: hidden;
+    border-radius: 8px 8px 0 0; /* Arredonda só o topo para encaixar no card */
+    background-color: #1a1a2e; /* Fundo escuro enquanto a imagem carrega */
+}
+
+.proj-carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.proj-carousel-track img {
+    min-width: 100%; /* Cada imagem ocupa 100% da largura do card */
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem amassar */
+}
+
+/* Botões do Carrossel do Projeto */
+.proj-prev-btn, .proj-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 23, 42, 0.7); /* Fundo escuro transparente */
+    color: var(--accent-color); /* Cor roxa do seu tema */
+    border: 1px solid var(--accent-color);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    opacity: 0; /* Esconde os botões até passar o mouse */
+}
+
+/* Mostra os botões apenas quando passa o mouse por cima do projeto */
+.projeto-carousel:hover .proj-prev-btn,
+.projeto-carousel:hover .proj-next-btn {
+    opacity: 1;
+}
+
+.proj-prev-btn:hover, .proj-next-btn:hover {
+    background: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.proj-prev-btn { left: 10px; }
+.proj-next-btn { right: 10px; }
+
+/* =========================================
+   Carrossel Principal de Projetos (1 por vez)
+   ========================================= */
+.main-projects-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px; /* Limita a largura para o projeto ficar bonito no PC */
+    margin: 20px auto 0 auto; /* Centraliza na tela */
+    position: relative;
+}
+
+.main-projects-container {
+    overflow: hidden; 
+    width: 100%;
+    padding: 10px 0;
+}
+
+.main-projects-track {
+    display: flex;
+    gap: 20px; 
+    transition: transform 0.4s ease-in-out;
+}
+
+/* O card agora ocupa 100% do espaço do container (mostra 1 por vez) */
+.main-projects-track .projeto-card {
+    flex: 0 0 100%; 
+    box-sizing: border-box;
+}
+
+/* Botões de passar pro lado */
+.main-carousel-btn {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.main-carousel-btn:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* ⚠️ Pode APAGAR as regras @media (max-width) que fizemos para o carrossel principal! 
+   Como agora é 1 por vez em qualquer tela, não precisamos mais daquelas quebras de responsividade. */

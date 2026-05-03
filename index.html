@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Guilherme - Backend Developer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Guilherme Maia Matos</div>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#trajetoria">Trajetória</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <header id="hero">
+      <div class="hero-content">
+        <h1 class="fira-code">> Guilherme Maia.py<span class="cursor">_</span></h1>
+        <p class="subtitle">Backend Developer | Python • Java • SQLite • REST APIs</p>
+
+        <div class="hero-buttons">
+          <a href="#projetos" class="btn btn-primary">Ver projetos &darr;</a>
+          <a
+            href="https://github.com/Guilherme663"
+            target="_blank"
+            class="btn btn-outline"
+            >GitHub &nearr;</a
+          >
+        </div>
+
+        <div class="stats">
+          <div class="stat-item">
+            <h3>4</h3>
+            <p>Certificações</p>
+          </div>
+          <div class="stat-item">
+            <h3>1</h3>
+            <p>Bootcamp</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="title">server.py — bash</span>
+        </div>
+        <div class="terminal-body fira-code">
+          <p>$ python main.py</p>
+          <p>>> Iniciando servidor FastAPI...</p>
+          <p>>> Conectando ao SQLite...</p>
+          <p class="success">>> Status: Online ✓</p>
+          <p>>> Porta: 8000</p>
+          <p class="success">>> Docs: /docs ✓</p>
+          <p class="cursor-block">&nbsp;</p>
+        </div>
+      </div>
+    </header>
+
+    <section id="sobre" class="container">
+      <h2 class="section-title">SOBRE MIM</h2>
+      <div class="sobre-grid">
+        <div class="foto-placeholder">
+          <img src="assets/imgs/eu.jpg" alt="eu">
+        </div>
+        <div class="sobre-texto">
+          <h3 class="fira-code">&lt; /&gt; Olá! Eu sou Guilherme</h3>
+          <p class="highlight">
+            Desenvolvedor Backend Júnior apaixonado por construir APIs
+          </p>
+          <p>
+            Eu sou Guilherme, desenvolvedor backend júnior com paixão por criar
+            soluções robustas e escaláveis. Atualmente estou focado em aprimorar
+            minhas habilidades e desenvolvimento.
+          </p>
+          <p>
+            Aqui você encontrará meus projetos, habilidades e um pouco da minha
+            trajetória no mundo do desenvolvimento. Estou sempre aberto a novos
+            desafios e oportunidades de aprendizado!
+          </p>
+
+          <div class="badges">
+            <span class="badge"
+              ><i class="fa-solid fa-location-dot"></i> Aracaju - SE</span
+            >
+            <span class="badge"
+              ><i class="fa-solid fa-briefcase"></i> Aberto a
+              oportunidades</span
+            >
+            <span class="badge"
+              ><i class="fa-solid fa-graduation-cap"></i>Técnico em Desenvolvimento de Sistemas</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trajetoria" class="container">
+      <h2 class="section-title">MINHA TRAJETÓRIA</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content">
+            <div class="status-badge">
+              <span class="sonar-dot"></span> Em andamento
+            </div>
+            <h3>Ciências Da Computação(1 Periodo - 2026 -)  UNIT Universidade Tiradentes</h3>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="date">2026</span>
+            <h3>Bootcamp LuizaLabs Backend com Python - DIO Digital Inovation One</h3>
+            <p>
+              [Python, FastApi, ApiRest, Banco de Dados, Github, Engenharia de Prompt, POO, IA]
+            </p>
+            <div class="tags">
+              <span class="tag">#Python</span><span class="tag">#Fastapi</span><span class="tag">#sqlite</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="date">2023-2025</span>
+            <h3>Técnico em Desenvolvimento de Sistemas - SENAI</h3>
+            <p>
+              [Logica de Programação, Redes, Banco de Dados, Boas Práticas, C#, Projetos Academicos]
+            </p>
+            <div class="tags">
+              <span class="tag">C#</span><span class="tag">#logica de Programação</span><span class="tag">#postgresql</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="container text-center">
+      <h2 class="section-title">HABILIDADES TÉCNICAS</h2>
+
+      <h3 class="skill-category">Linguagens</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-python skill-icon" style="color: #3776ab"></i>
+          <p>Python</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-java skill-icon" style="color: #ed8b00"></i>
+          <p>Java</p>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+            alt="C#"
+            width="50"
+            height="50"
+          />
+          <span>C#</span>
+        </div>
+      </div>
+
+      <h3 class="skill-category mt-4">
+        Frameworks, Banco de Dados & Ferramentas
+      </h3>
+
+      <div class="carousel-wrapper">
+        <button id="prev-btn" class="carousel-btn">&larr;</button>
+
+        <div class="carousel-container">
+          <div class="carousel-track" id="frameworks-track">
+            <div class="skill-card">
+              <i class="fa-solid fa-bolt skill-icon" style="color: #009688"></i>
+              <p>FastAPI</p>
+            </div>
+            <div class="skill-card">
+              <i class="fa-solid fa-database skill-icon" style="color: #003b57"></i>
+              <p>SQLite</p>
+            </div>
+            <div class="skill-card">
+              <i class="fa-solid fa-network-wired skill-icon" style="color: #6366f1"></i>
+              <p>REST API</p>
+            </div>
+            <div class="skill-card">
+              <i class="fa-brands fa-git-alt skill-icon" style="color: #f05032"></i>
+              <p>Git</p>
+            </div>
+            <div class="skill-card">
+              <i class="fa-brands fa-github skill-icon" style="color: #ffffff"></i>
+              <p>GitHub</p>
+            </div>  
+             <div class="skill-card">
+              <i class="fa-brands fa-html5 skill-icon" style="color: #e34f26"></i>
+              <p>HTML5</p>
+            </div>
+            <div class="skill-card">
+              <i class="fa-brands fa-css3-alt skill-icon" style="color: #1572b6"></i>
+              <p>CSS3</p>
+            </div>
+            <div class="skill-card">
+              <i class="fa-brands fa-js skill-icon" style="color: #f7df1e"></i>
+              <p>JavaScript</p>
+            </div>  
+          </div>
+        </div>
+
+        <button id="next-btn" class="carousel-btn">&rarr;</button>
+      </div>
+    </section>
+
+    <section id="projetos" class="container">
+      <h2 class="section-title">PROJETOS</h2>
+      
+      <div class="main-projects-wrapper">
+        <button id="main-prev-btn" class="main-carousel-btn">&larr;</button>
+        
+        <div class="main-projects-container">
+          <div class="main-projects-track" id="main-projects-track">
+            
+            <div class="projeto-card">
+              <div class="projeto-carousel">
+                <button class="proj-prev-btn">&larr;</button>
+                <div class="proj-carousel-track">
+                  <img src="assets/imgs/1.png" alt="Tela 1 do Sistema Bancário">
+                  <img src="assets/imgs/4.png" alt="Tela 2 do Sistema Bancário">
+                  <img src="assets/imgs/3.png" alt="Tela 3 do Sistema Bancário">
+                </div>
+                <button class="proj-next-btn">&rarr;</button>
+              </div>
+              <div class="projeto-info">
+                <h3 class="fira-code">Sistema Bancario com FastApi</h3>
+                <p>CRUD completo com autenticação básica</p>
+                <div class="tags">
+                  <span class="tag">#fastapi</span>
+                  <span class="tag">#sqlite</span>
+                  <span class="tag">#python</span>
+                </div>
+                <a href="https://github.com/Guilherme663/Sistema_Bancario_com_FastApi-" target="_blank" class="projeto-link">
+                  <i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+
+            <div class="projeto-card">
+              <div class="projeto-carousel">
+                <button class="proj-prev-btn">&larr;</button>
+                <div class="proj-carousel-track">
+                  <img src="assets/imgs/login.jpeg" alt="Tela de Login">
+                  <img src="assets/imgs/inicio.jpeg" alt="Tela de Inicio">
+                  <img src="assets/imgs/gestao.jpeg" alt="Tela de Dashboard">
+                </div>
+                <button class="proj-next-btn">&rarr;</button>
+              </div>
+              <div class="projeto-info">
+                <h3 class="fira-code">Sistema De Gestão de Estoque</h3>
+                <p>Sistema completo de gestão de estoque com dashboard e moderação</p>
+                <div class="tags">
+                  <span class="tag">#postgresql</span>
+                  <span class="tag">#tailwind</span>
+                  <span class="tag">#python - flask</span>
+                </div>
+              </div>
+            </div>
+
+            </div>
+        </div>
+        
+        <button id="main-next-btn" class="main-carousel-btn">&rarr;</button>
+      </div>
+    </section>
+
+    <section id="formacao" class="container">
+      <h2 class="section-title">FORMAÇÃO & CERTIFICADOS</h2>
+      <div class="certificados-list">
+        <div class="certificado-item">
+          <p><strong>[Bootcamp Python com API REST]</strong></p>
+          <span class="cert-tag">[DIO]</span>
+          <span class="cert-ano">[2026]</span>
+        </div>
+        <div class="certificado-item">
+          <p><strong>[Git e GitHub]</strong></p>
+          <span class="cert-tag">[Curso em Video]</span>
+          <span class="cert-ano">[2025]</span>
+        </div>
+        <div class="certificado-item">
+          <p><strong>[Python3]</strong></p>
+          <span class="cert-tag">[Curso em Video]</span>
+          <span class="cert-ano">[2024]</span>
+        </div>
+        <div class="certificado-item">
+          <p><strong>[Tecnico em Desenvolvimento de Sistemas]</strong></p>
+          <span class="cert-tag">[SENAI]</span>
+          <span class="cert-ano">[2023 - 2025]</span>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contato" class="container text-center">
+      <h2 class="section-title center-title">CONTATO</h2>
+      <p>Aberto a oportunidades, colaborações e feedbacks</p>
+      <div class="contato-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=guilhermemmatos07@gmail.com" target="_blank">
+          <i class="fa-regular fa-envelope"></i> [guilhermemmatos07@gmail.com]
+        </a>
+        <a href="https://github.com/Guilherme663" target="_blank">
+          <i class="fa-brands fa-github"></i> [/Guilherme663]
+        </a>
+        <a href="https://www.linkedin.com/in/guilherme-m-923912349/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> [/Guilherme Maia]
+        </a>
+        
+        <a href="tel:+5579999999999">
+          <i class="fa-solid fa-phone"></i> [(79) 99812-2023]
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+
+  <canvas id="particle-network"></canvas>
+
+  <div id="boot-screen">
+    <div class="boot-text">
+      <span id="boot-lines"></span><span class="cursor">_</span>
+    </div>
+  </div>
+</html>
