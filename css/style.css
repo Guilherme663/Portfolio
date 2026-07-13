@@ -518,12 +518,7 @@ a {
 /* =========================================
    Efeitos (Boot Screen, Sonar, Partículas)
    ========================================= */
-#boot-screen {
-    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    background-color: var(--bg-color); z-index: 9999; display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-code); transition: opacity 0.8s ease-in-out, visibility 0.8s;
-}
-.boot-text { font-size: clamp(1.2rem, 4vw, 3.5rem); font-weight: 600; color: var(--accent-color); text-align: left; width: 90%; max-width: 1200px; line-height: 1.5; }
+
 
 #particle-network {
     position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
