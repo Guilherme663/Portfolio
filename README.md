@@ -9,7 +9,6 @@
 
 ## 🔗 Acesse o projeto online
 [**Clique aqui para visualizar o Portfólio no ar**](https://guilherme663.github.io/Portfolio/)  
-*(Lembre-se de substituir o link acima pelo link real do seu GitHub Pages)*
 
 ---
 
