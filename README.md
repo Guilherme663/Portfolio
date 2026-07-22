@@ -8,7 +8,7 @@
 > Repositório oficial do meu portfólio pessoal, desenvolvido para apresentar meus projetos, trajetória profissional e habilidades como Desenvolvedor Backend Júnior.
 
 ## 🔗 Acesse o projeto online
-[**Clique aqui para visualizar o Portfólio no ar**](https://Guilherme663.github.io/NOME-DO-SEU-REPOSITORIO)  
+[**Clique aqui para visualizar o Portfólio no ar**](https://guilherme663.github.io/Portfolio/)  
 *(Lembre-se de substituir o link acima pelo link real do seu GitHub Pages)*
 
 ---
