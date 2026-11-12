@@ -300,3 +300,69 @@ document.addEventListener("DOMContentLoaded", () => {
         updateProjetosCarousel();
     });
 });
+
+// ===== Foto: tenta .jpeg, .jpg e .png; se nenhuma existir, mostra as iniciais =====
+(function () {
+  const img = document.querySelector('.foto-img');
+  const moldura = document.getElementById('foto-moldura');
+  if (!img || !moldura) return;
+
+  const base = 'assets/lain';
+  const extensoes = ['jpeg', 'jpg', 'png'];
+  let tentativa = 0;
+
+  img.addEventListener('error', function () {
+    tentativa++;
+    if (tentativa < extensoes.length) {
+      img.src = base + '.' + extensoes[tentativa];
+    } else {
+      moldura.classList.add('sem-foto');
+    }
+  });
+})();
+
+// ===== Formulário de contato via Formspree =====
+(function () {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const botao = document.getElementById('submit-btn');
+  const status = document.getElementById('form-status');
+  const textoOriginal = botao.textContent;
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      status.textContent = 'Preencha todos os campos com dados válidos.';
+      status.className = 'form-status error';
+      form.reportValidity();
+      return;
+    }
+
+    botao.disabled = true;
+    botao.textContent = 'Enviando...';
+    status.textContent = '';
+    status.className = 'form-status';
+
+    try {
+      const resposta = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!resposta.ok) throw new Error('Falha no envio');
+
+      status.textContent = 'Mensagem enviada com sucesso! Obrigado pelo contato.';
+      status.className = 'form-status success';
+      form.reset();
+    } catch (erro) {
+      status.textContent = 'Não foi possível enviar a mensagem. Tente novamente mais tarde.';
+      status.className = 'form-status error';
+    } finally {
+      botao.disabled = false;
+      botao.textContent = textoOriginal;
+    }
+  });
+})();

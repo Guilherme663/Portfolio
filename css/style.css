@@ -974,3 +974,168 @@ h1, h2, h3, h4 {
         margin-left: 0;
     }
 }
+
+/* =========================================
+   Sobre Mim: Foto
+   ========================================= */
+.sobre-grid {
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) 1fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.sobre-foto {
+    display: flex;
+    justify-content: center;
+}
+
+.foto-moldura {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 3 / 4;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-strong);
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow-card), var(--shadow-glow);
+    overflow: hidden;
+}
+
+.foto-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.foto-fallback {
+    position: absolute;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-code);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    background: var(--accent-soft);
+}
+
+.foto-moldura.sem-foto .foto-fallback {
+    display: flex;
+}
+
+.foto-moldura.sem-foto .foto-img {
+    display: none;
+}
+
+/* =========================================
+   Formulário de Contato
+   ========================================= */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: var(--bg-elevated);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .btn {
+    align-self: center;
+    cursor: pointer;
+    border: none;
+}
+
+.contact-form .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-status {
+    text-align: center;
+    min-height: 1.5rem;
+    font-family: var(--font-code);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.form-status.success {
+    color: var(--success-color);
+}
+
+.form-status.error {
+    color: #f87171;
+}
+
+/* =========================================
+   Responsividade: Sobre Mim e Contato
+   ========================================= */
+@media (max-width: 768px) {
+    .sobre-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .sobre-foto {
+        order: -1;
+    }
+
+    .foto-moldura {
+        max-width: 240px;
+    }
+
+    .sobre-texto h3 {
+        font-size: 1.5rem;
+    }
+
+    .badges {
+        justify-content: center;
+    }
+
+    .contact-form {
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .foto-moldura {
+        max-width: 200px;
+    }
+
+    .contact-form .btn {
+        width: 100%;
+    }
+}

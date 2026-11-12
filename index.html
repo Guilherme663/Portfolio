@@ -37,16 +37,7 @@
         <a href="https://github.com/Guilherme663" target="_blank" class="btn btn-outline">GitHub &nearr;</a>
       </div>
 
-      <div class="stats">
-        <div class="stat-item">
-          <h3>4</h3>
-          <p>Certificações</p>
-        </div>
-        <div class="stat-item">
-          <h3>1</h3>
-          <p>Bootcamp</p>
-        </div>
-      </div>
+      <div class="stats"></div>
     </div>
 
     <div class="terminal-window">
@@ -71,6 +62,13 @@
   <section id="sobre" class="container">
     <h2 class="section-title">SOBRE MIM</h2>
     <div class="sobre-grid">
+      <div class="sobre-foto">
+        <div class="foto-moldura" id="foto-moldura">
+          <img class="foto-img" src="assets/lain.jpg" alt="Foto de Guilherme Maia Matos" />
+          <div class="foto-fallback" aria-hidden="true">GM</div>
+        </div>
+      </div>
+
       <div class="sobre-texto">
         <h3 class="fira-code">&lt; /&gt; Olá! Eu sou Guilherme</h3>
         <p class="highlight">
@@ -80,34 +78,30 @@
           Sou estudante de Ciência da Computação na Universidade Tiradentes (UNIT), técnico em Desenvolvimento de
           Sistemas pelo SENAI e entusiasta da tecnologia. Tenho interesse em entender como as coisas funcionam por trás
           dos sistemas e transformar ideias em soluções que realmente façam a diferença.
+        </p>
         <p>
           Minha trajetória na programação começou com a lógica de programação e o desenvolvimento de sistemas. Desde
           então, venho explorando diferentes tecnologias e construindo projetos acadêmicos e pessoais, principalmente
           nas áreas de desenvolvimento backend, APIs, bancos de dados e aplicações web.
         </p>
-
         <p>
           Atualmente, também estou direcionando meus estudos para a Cibersegurança, buscando aprofundar meus
           conhecimentos sobre segurança da informação, sistemas, redes e proteção de ambientes digitais.
         </p>
-
         <p>
           Além da parte técnica, sou vice-presidente da REDSEC, liga acadêmica de cibersegurança da UNIT. Essa
           experiência me permite participar da organização de atividades, colaborar em projetos e desenvolver
           habilidades de liderança e trabalho em equipe.
         </p>
-
         <p>
-          Aqui você encontrará meus projetos, habilidades e um pouco da minha
-          trajetória no mundo do desenvolvimento. Estou sempre aberto a novos
-          desafios e oportunidades de aprendizado!
+          Aqui você encontrará meus projetos, habilidades e um pouco da minha trajetória no mundo do desenvolvimento.
+          Estou sempre aberto a novos desafios e oportunidades de aprendizado!
         </p>
 
         <div class="badges">
           <span class="badge"><i class="fa-solid fa-location-dot"></i> Aracaju - SE</span>
-          <span class="badge"><i class="fa-solid fa-briefcase"></i> Aberto a
-            oportunidades</span>
-          <span class="badge"><i class="fa-solid fa-graduation-cap"></i>Formando em Ciência da Computação</span>
+          <span class="badge"><i class="fa-solid fa-briefcase"></i> Aberto a oportunidades</span>
+          <span class="badge"><i class="fa-solid fa-graduation-cap"></i> Formando em Ciência da Computação</span>
         </div>
       </div>
     </div>
@@ -332,7 +326,24 @@
   </section>
 
   <footer id="contato" class="container text-center">
+
     <h2 class="section-title center-title">CONTATO</h2>
+
+    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xeagoarn" method="POST"
+      novalidate>
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Seu nome" required />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+      </div>
+      <div class="form-group">
+        <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" id="submit-btn">Enviar mensagem</button>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+
     <p>Aberto a oportunidades, colaborações e feedbacks</p>
     <div class="contato-links">
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=guilhermemmatos07@gmail.com" target="_blank">
